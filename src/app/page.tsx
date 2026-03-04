@@ -19,7 +19,7 @@ export default function LandingPage() {
       borderRadius="soft"
       contentWidth="smallMedium"
       sizing="largeSmallSizeMediumTitles"
-      background="aurora"
+      background="circleGradient"
       cardStyle="gradient-bordered"
       primaryButtonStyle="diagonal-gradient"
       secondaryButtonStyle="solid"
@@ -47,7 +47,7 @@ export default function LandingPage() {
           tag="Next Generation AI"
           tagIcon={Sparkles}
           tagAnimation="slide-up"
-          background={{ variant: "aurora" }}
+          background={{ variant: "sparkles-gradient" }}
           buttons={[
             { text: "Get Started", href: "contact" },
             { text: "View Demo", href: "https://example.com/demo" }
