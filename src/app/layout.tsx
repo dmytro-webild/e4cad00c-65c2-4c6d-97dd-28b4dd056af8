@@ -1,55 +1,23 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
-import { Halant } from "next/font/google";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
-import { ServiceWrapper } from "@/components/ServiceWrapper";
-import Tag from "@/tag/Tag";
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",  subsets: ["latin"],
-});
-
-const halant = Halant({
-  variable: "--font-halant",  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",  subsets: ["latin"],
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
-  title: "AIGenius - Intelligent AI Solutions for Business",  description: "Transform your business with cutting-edge artificial intelligence. AI-powered automation, predictive analytics, and machine learning solutions trusted by 500+ companies.",  keywords: "AI, artificial intelligence, machine learning, predictive analytics, automation, NLP, computer vision",  robots: {
-    index: true,
-    follow: true,
-  },
-  openGraph: {
-    title: "AIGenius - Next Generation AI Platform",    description: "Harness the power of artificial intelligence to drive innovation and competitive advantage.",    type: "website",    url: "https://aigeniusai.com",    siteName: "AIGenius",    images: [
-      {
-        url: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3ATISutjHAMVhOTVtxcxfL3uyXl/a-sleek-modern-ai-dashboard-interface-fe-1772610240114-b60f2971.png",        alt: "AIGenius Dashboard"},
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",    title: "AIGenius - AI Solutions",    description: "Transform your business with cutting-edge artificial intelligence.",    images: [
-      "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3ATISutjHAMVhOTVtxcxfL3uyXl/a-sleek-modern-ai-dashboard-interface-fe-1772610240114-b60f2971.png"],
-  },
-};
+  title: "AIGenius - Intelligent AI Solutions for Tomorrow",  description: "Transform your business with cutting-edge artificial intelligence. AIGenius builds AI systems that learn, adapt, and drive measurable results."};
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <ServiceWrapper>
-        <body
-          className={`${dmSans.variable} ${halant.variable} ${inter.variable} antialiased`}
-        >
-          <Tag />
-          {children}
-        
+    <html lang="en">
+      <body className={poppins.className}>{children}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -1417,7 +1385,6 @@ export default function RootLayout({
           }}
         />
       </body>
-      </ServiceWrapper>
     </html>
   );
 }
