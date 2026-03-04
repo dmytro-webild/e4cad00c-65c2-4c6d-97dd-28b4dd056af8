@@ -185,8 +185,8 @@ export default function LandingPage() {
           title="Start Your AI Journey Today"
           description="Join hundreds of companies already leveraging AIGenius to drive innovation, reduce costs, and gain competitive advantage. Our team is ready to help you implement AI solutions tailored to your needs."
           buttons={[
-            { text: "Schedule Demo", href: "https://example.com/demo" },
-            { text: "Contact Sales", href: "mailto:sales@aigeniusai.com" }
+            { text: "Contact Sales", href: "mailto:sales@aigeniusai.com" },
+            { text: "Schedule Demo", href: "https://example.com/demo" }
           ]}
           buttonAnimation="slide-up"
           background={{ variant: "sparkles-gradient" }}
